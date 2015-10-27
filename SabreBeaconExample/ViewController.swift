@@ -7,19 +7,22 @@
 //
 
 import UIKit
+import CoreLocation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SabreLabsBeaconProtocol {
+
+    var slBeacon = SabreLabsBeacon(proximityUUID: NSUUID(UUIDString: "F7826DA6-4FA2-4E98-8024-BC5B71E0893E"))
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        slBeacon.delegate = self
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func rangedBeacons(beacons: [AnyObject]) {
+        NSLog("Found beacons: \(beacons)")
     }
-
-
+    @objc func didDetermineState(state: CLRegionState) { }
+    @objc func didEnterRegion(region: CLRegion) {  }
+    @objc func didExitRegion(region: CLRegion) {  }
 }
-

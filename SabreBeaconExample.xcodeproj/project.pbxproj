@@ -14,6 +14,8 @@
 		35E254391BDFC8BD006D3593 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E254371BDFC8BD006D3593 /* LaunchScreen.storyboard */; };
 		35E254441BDFC8BE006D3593 /* SabreBeaconExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E254431BDFC8BE006D3593 /* SabreBeaconExampleTests.swift */; };
 		35E2544F1BDFC8BE006D3593 /* SabreBeaconExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E2544E1BDFC8BE006D3593 /* SabreBeaconExampleUITests.swift */; };
+		35E2545E1BDFC8E7006D3593 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E2545C1BDFC8E7006D3593 /* ExampleViewController.swift */; };
+		35E2545F1BDFC8E7006D3593 /* SabreLabsBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E2545D1BDFC8E7006D3593 /* SabreLabsBeacon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		35E2544A1BDFC8BE006D3593 /* SabreBeaconExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SabreBeaconExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35E2544E1BDFC8BE006D3593 /* SabreBeaconExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SabreBeaconExampleUITests.swift; sourceTree = "<group>"; };
 		35E254501BDFC8BE006D3593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35E2545C1BDFC8E7006D3593 /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		35E2545D1BDFC8E7006D3593 /* SabreLabsBeacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SabreLabsBeacon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +101,14 @@
 		35E2542D1BDFC8BD006D3593 /* SabreBeaconExample */ = {
 			isa = PBXGroup;
 			children = (
+				35E2543A1BDFC8BD006D3593 /* Info.plist */,
 				35E2542E1BDFC8BD006D3593 /* AppDelegate.swift */,
+				35E2545C1BDFC8E7006D3593 /* ExampleViewController.swift */,
+				35E2545D1BDFC8E7006D3593 /* SabreLabsBeacon.swift */,
 				35E254301BDFC8BD006D3593 /* ViewController.swift */,
-				35E254321BDFC8BD006D3593 /* Main.storyboard */,
 				35E254351BDFC8BD006D3593 /* Assets.xcassets */,
 				35E254371BDFC8BD006D3593 /* LaunchScreen.storyboard */,
-				35E2543A1BDFC8BD006D3593 /* Info.plist */,
+				35E254321BDFC8BD006D3593 /* Main.storyboard */,
 			);
 			path = SabreBeaconExample;
 			sourceTree = "<group>";
@@ -193,6 +199,11 @@
 				TargetAttributes = {
 					35E2542A1BDFC8BD006D3593 = {
 						CreatedOnToolsVersion = 7.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					35E2543E1BDFC8BD006D3593 = {
 						CreatedOnToolsVersion = 7.1;
@@ -258,6 +269,8 @@
 			files = (
 				35E254311BDFC8BD006D3593 /* ViewController.swift in Sources */,
 				35E2542F1BDFC8BD006D3593 /* AppDelegate.swift in Sources */,
+				35E2545E1BDFC8E7006D3593 /* ExampleViewController.swift in Sources */,
+				35E2545F1BDFC8E7006D3593 /* SabreLabsBeacon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
